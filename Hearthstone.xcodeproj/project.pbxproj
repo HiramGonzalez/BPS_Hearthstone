@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		911915C62A6B1986006BA4D7 /* GoogleMapsBase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915C52A6B1986006BA4D7 /* GoogleMapsBase.xcframework */; };
+		911915C82A6B1996006BA4D7 /* GoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915C72A6B1996006BA4D7 /* GoogleMaps.xcframework */; };
+		911915CA2A6B19A1006BA4D7 /* GoogleMapsCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915C92A6B19A1006BA4D7 /* GoogleMapsCore.xcframework */; };
+		911915CC2A6B1A19006BA4D7 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 911915CB2A6B1A19006BA4D7 /* GoogleMaps.bundle */; };
+		911915CF2A6B1A3A006BA4D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915CE2A6B1A3A006BA4D7 /* Accelerate.framework */; };
+		911915D12A6B1A41006BA4D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915D02A6B1A41006BA4D7 /* CoreData.framework */; };
+		911915D32A6B1A48006BA4D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915D22A6B1A48006BA4D7 /* CoreGraphics.framework */; };
+		911915D52A6B1A4F006BA4D7 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915D42A6B1A4F006BA4D7 /* CoreImage.framework */; };
+		911915D72A6B1A5A006BA4D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915D62A6B1A5A006BA4D7 /* CoreLocation.framework */; };
+		911915D92A6B1A60006BA4D7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915D82A6B1A60006BA4D7 /* CoreTelephony.framework */; };
+		911915DB2A6B1A66006BA4D7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915DA2A6B1A66006BA4D7 /* CoreText.framework */; };
+		911915DD2A6B1A6D006BA4D7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915DC2A6B1A6D006BA4D7 /* GLKit.framework */; };
+		911915DF2A6B1A75006BA4D7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915DE2A6B1A75006BA4D7 /* ImageIO.framework */; };
+		911915E12A6B1A82006BA4D7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915E02A6B1A82006BA4D7 /* libc++.tbd */; };
+		911915E32A6B1A88006BA4D7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915E22A6B1A88006BA4D7 /* libz.tbd */; };
+		911915E52A6B1A8F006BA4D7 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915E42A6B1A8F006BA4D7 /* Metal.framework */; };
+		911915E72A6B1A96006BA4D7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915E62A6B1A96006BA4D7 /* OpenGLES.framework */; };
+		911915E92A6B1A9C006BA4D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915E82A6B1A9C006BA4D7 /* QuartzCore.framework */; };
+		911915EB2A6B1AA3006BA4D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915EA2A6B1AA3006BA4D7 /* SystemConfiguration.framework */; };
+		911915ED2A6B1AAD006BA4D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915EC2A6B1AAD006BA4D7 /* UIKit.framework */; };
+		911915F32A6B1C65006BA4D7 /* GoogleMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911915F22A6B1C65006BA4D7 /* GoogleMapsView.swift */; };
+		911915F52A6B1D0B006BA4D7 /* ShopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911915F42A6B1D0B006BA4D7 /* ShopsView.swift */; };
+		911ABF9B2A6ED99F006B7921 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */; };
+		911ABF9D2A6F02F0006B7921 /* ShopsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */; };
+		9149979A2A6868B400F317B1 /* HearthstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914997992A6868B400F317B1 /* HearthstoneApp.swift */; };
+		9149979C2A6868B400F317B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9149979B2A6868B400F317B1 /* ContentView.swift */; };
+		9149979E2A6868B600F317B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9149979D2A6868B600F317B1 /* Assets.xcassets */; };
+		914997A12A6868B600F317B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914997A02A6868B600F317B1 /* Preview Assets.xcassets */; };
+		914997A82A688C0600F317B1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 914997A72A688C0600F317B1 /* Montserrat-SemiBold.ttf */; };
+		914997AE2A689E4400F317B1 /* NavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914997AD2A689E4400F317B1 /* NavigationTabView.swift */; };
+		91596F8A2A69933700E6C7AE /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F892A69933700E6C7AE /* SearchResultsView.swift */; };
+		91596F8D2A699F7F00E6C7AE /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F8C2A699F7F00E6C7AE /* ListCardView.swift */; };
+		91596F8F2A69A68500E6C7AE /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91596F8E2A69A68500E6C7AE /* Montserrat-Bold.ttf */; };
+		91596F912A69A68C00E6C7AE /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91596F902A69A68C00E6C7AE /* Montserrat-Regular.ttf */; };
+		91596F962A69B88000E6C7AE /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F952A69B88000E6C7AE /* FavoritesView.swift */; };
+		91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F972A69BCD800E6C7AE /* SearchBarView.swift */; };
+		91596F9B2A69DA7600E6C7AE /* CardOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F9A2A69DA7600E6C7AE /* CardOverviewView.swift */; };
+		91596F9E2A69ECD200E6C7AE /* CardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F9D2A69ECD200E6C7AE /* CardTypeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		911915C52A6B1986006BA4D7 /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMapsBase.xcframework; sourceTree = "<group>"; };
+		911915C72A6B1996006BA4D7 /* GoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMaps.xcframework; sourceTree = "<group>"; };
+		911915C92A6B19A1006BA4D7 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMapsCore.xcframework; sourceTree = "<group>"; };
+		911915CB2A6B1A19006BA4D7 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Hearthstone/GoogleMaps.xcframework/ios-arm64/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		911915CE2A6B1A3A006BA4D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		911915D02A6B1A41006BA4D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		911915D22A6B1A48006BA4D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		911915D42A6B1A4F006BA4D7 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		911915D62A6B1A5A006BA4D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		911915D82A6B1A60006BA4D7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		911915DA2A6B1A66006BA4D7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		911915DC2A6B1A6D006BA4D7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		911915DE2A6B1A75006BA4D7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		911915E02A6B1A82006BA4D7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		911915E22A6B1A88006BA4D7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		911915E42A6B1A8F006BA4D7 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		911915E62A6B1A96006BA4D7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		911915E82A6B1A9C006BA4D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		911915EA2A6B1AA3006BA4D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		911915EC2A6B1AAD006BA4D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		911915F22A6B1C65006BA4D7 /* GoogleMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsView.swift; sourceTree = "<group>"; };
+		911915F42A6B1D0B006BA4D7 /* ShopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsView.swift; sourceTree = "<group>"; };
+		911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+		911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewModel.swift; sourceTree = "<group>"; };
+		914997962A6868B400F317B1 /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		914997992A6868B400F317B1 /* HearthstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneApp.swift; sourceTree = "<group>"; };
+		9149979B2A6868B400F317B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9149979D2A6868B600F317B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		914997A02A6868B600F317B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		914997A72A688C0600F317B1 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		914997A92A688C1A00F317B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		914997AD2A689E4400F317B1 /* NavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabView.swift; sourceTree = "<group>"; };
+		91596F892A69933700E6C7AE /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		91596F8C2A699F7F00E6C7AE /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
+		91596F8E2A69A68500E6C7AE /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		91596F902A69A68C00E6C7AE /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		91596F952A69B88000E6C7AE /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		91596F972A69BCD800E6C7AE /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		91596F9A2A69DA7600E6C7AE /* CardOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOverviewView.swift; sourceTree = "<group>"; };
+		91596F9D2A69ECD200E6C7AE /* CardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		914997932A6868B400F317B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911915ED2A6B1AAD006BA4D7 /* UIKit.framework in Frameworks */,
+				911915EB2A6B1AA3006BA4D7 /* SystemConfiguration.framework in Frameworks */,
+				911915E92A6B1A9C006BA4D7 /* QuartzCore.framework in Frameworks */,
+				911915E72A6B1A96006BA4D7 /* OpenGLES.framework in Frameworks */,
+				911915E52A6B1A8F006BA4D7 /* Metal.framework in Frameworks */,
+				911915E32A6B1A88006BA4D7 /* libz.tbd in Frameworks */,
+				911915E12A6B1A82006BA4D7 /* libc++.tbd in Frameworks */,
+				911915DF2A6B1A75006BA4D7 /* ImageIO.framework in Frameworks */,
+				911915DD2A6B1A6D006BA4D7 /* GLKit.framework in Frameworks */,
+				911915DB2A6B1A66006BA4D7 /* CoreText.framework in Frameworks */,
+				911915D92A6B1A60006BA4D7 /* CoreTelephony.framework in Frameworks */,
+				911915D72A6B1A5A006BA4D7 /* CoreLocation.framework in Frameworks */,
+				911915D52A6B1A4F006BA4D7 /* CoreImage.framework in Frameworks */,
+				911915D32A6B1A48006BA4D7 /* CoreGraphics.framework in Frameworks */,
+				911915D12A6B1A41006BA4D7 /* CoreData.framework in Frameworks */,
+				911915CF2A6B1A3A006BA4D7 /* Accelerate.framework in Frameworks */,
+				911915CA2A6B19A1006BA4D7 /* GoogleMapsCore.xcframework in Frameworks */,
+				911915C62A6B1986006BA4D7 /* GoogleMapsBase.xcframework in Frameworks */,
+				911915C82A6B1996006BA4D7 /* GoogleMaps.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		911915CD2A6B1A3A006BA4D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				911915EC2A6B1AAD006BA4D7 /* UIKit.framework */,
+				911915EA2A6B1AA3006BA4D7 /* SystemConfiguration.framework */,
+				911915E82A6B1A9C006BA4D7 /* QuartzCore.framework */,
+				911915E62A6B1A96006BA4D7 /* OpenGLES.framework */,
+				911915E42A6B1A8F006BA4D7 /* Metal.framework */,
+				911915E22A6B1A88006BA4D7 /* libz.tbd */,
+				911915E02A6B1A82006BA4D7 /* libc++.tbd */,
+				911915DE2A6B1A75006BA4D7 /* ImageIO.framework */,
+				911915DC2A6B1A6D006BA4D7 /* GLKit.framework */,
+				911915DA2A6B1A66006BA4D7 /* CoreText.framework */,
+				911915D82A6B1A60006BA4D7 /* CoreTelephony.framework */,
+				911915D62A6B1A5A006BA4D7 /* CoreLocation.framework */,
+				911915D42A6B1A4F006BA4D7 /* CoreImage.framework */,
+				911915D22A6B1A48006BA4D7 /* CoreGraphics.framework */,
+				911915D02A6B1A41006BA4D7 /* CoreData.framework */,
+				911915CE2A6B1A3A006BA4D7 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		911915EF2A6B1B6C006BA4D7 /* Shops */ = {
+			isa = PBXGroup;
+			children = (
+				911915F22A6B1C65006BA4D7 /* GoogleMapsView.swift */,
+				911915F42A6B1D0B006BA4D7 /* ShopsView.swift */,
+				911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */,
+				911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */,
+			);
+			path = Shops;
+			sourceTree = "<group>";
+		};
+		9149978D2A6868B400F317B1 = {
+			isa = PBXGroup;
+			children = (
+				911915CB2A6B1A19006BA4D7 /* GoogleMaps.bundle */,
+				914997982A6868B400F317B1 /* Hearthstone */,
+				914997972A6868B400F317B1 /* Products */,
+				911915CD2A6B1A3A006BA4D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		914997972A6868B400F317B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				914997962A6868B400F317B1 /* Hearthstone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		914997982A6868B400F317B1 /* Hearthstone */ = {
+			isa = PBXGroup;
+			children = (
+				911915C52A6B1986006BA4D7 /* GoogleMapsBase.xcframework */,
+				911915C72A6B1996006BA4D7 /* GoogleMaps.xcframework */,
+				911915C92A6B19A1006BA4D7 /* GoogleMapsCore.xcframework */,
+				91596F932A69A74500E6C7AE /* Fonts */,
+				914997AB2A689DF800F317B1 /* UI */,
+				914997A92A688C1A00F317B1 /* Info.plist */,
+				914997992A6868B400F317B1 /* HearthstoneApp.swift */,
+				9149979D2A6868B600F317B1 /* Assets.xcassets */,
+				9149979F2A6868B600F317B1 /* Preview Content */,
+			);
+			path = Hearthstone;
+			sourceTree = "<group>";
+		};
+		9149979F2A6868B600F317B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				914997A02A6868B600F317B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		914997AA2A689DE700F317B1 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				9149979B2A6868B400F317B1 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		914997AB2A689DF800F317B1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				911915EF2A6B1B6C006BA4D7 /* Shops */,
+				91596F9C2A69ECB400E6C7AE /* CardType */,
+				91596F992A69DA5F00E6C7AE /* CardOverview */,
+				91596F942A69B87000E6C7AE /* Favorites */,
+				91596F8B2A699F6600E6C7AE /* ListView */,
+				91596F882A69931E00E6C7AE /* SearchResults */,
+				914997AC2A689E0F00F317B1 /* NavigationTab */,
+				914997AA2A689DE700F317B1 /* ContentView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		914997AC2A689E0F00F317B1 /* NavigationTab */ = {
+			isa = PBXGroup;
+			children = (
+				914997AD2A689E4400F317B1 /* NavigationTabView.swift */,
+			);
+			path = NavigationTab;
+			sourceTree = "<group>";
+		};
+		91596F882A69931E00E6C7AE /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				91596F892A69933700E6C7AE /* SearchResultsView.swift */,
+				91596F972A69BCD800E6C7AE /* SearchBarView.swift */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		91596F8B2A699F6600E6C7AE /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				91596F8C2A699F7F00E6C7AE /* ListCardView.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		91596F932A69A74500E6C7AE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				914997A72A688C0600F317B1 /* Montserrat-SemiBold.ttf */,
+				91596F8E2A69A68500E6C7AE /* Montserrat-Bold.ttf */,
+				91596F902A69A68C00E6C7AE /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		91596F942A69B87000E6C7AE /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				91596F952A69B88000E6C7AE /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		91596F992A69DA5F00E6C7AE /* CardOverview */ = {
+			isa = PBXGroup;
+			children = (
+				91596F9A2A69DA7600E6C7AE /* CardOverviewView.swift */,
+			);
+			path = CardOverview;
+			sourceTree = "<group>";
+		};
+		91596F9C2A69ECB400E6C7AE /* CardType */ = {
+			isa = PBXGroup;
+			children = (
+				91596F9D2A69ECD200E6C7AE /* CardTypeView.swift */,
+			);
+			path = CardType;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		914997952A6868B400F317B1 /* Hearthstone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 914997A42A6868B600F317B1 /* Build configuration list for PBXNativeTarget "Hearthstone" */;
+			buildPhases = (
+				914997922A6868B400F317B1 /* Sources */,
+				914997932A6868B400F317B1 /* Frameworks */,
+				914997942A6868B400F317B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hearthstone;
+			productName = Hearthstone;
+			productReference = 914997962A6868B400F317B1 /* Hearthstone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9149978E2A6868B400F317B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					914997952A6868B400F317B1 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 914997912A6868B400F317B1 /* Build configuration list for PBXProject "Hearthstone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9149978D2A6868B400F317B1;
+			productRefGroup = 914997972A6868B400F317B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				914997952A6868B400F317B1 /* Hearthstone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		914997942A6868B400F317B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91596F8F2A69A68500E6C7AE /* Montserrat-Bold.ttf in Resources */,
+				914997A82A688C0600F317B1 /* Montserrat-SemiBold.ttf in Resources */,
+				914997A12A6868B600F317B1 /* Preview Assets.xcassets in Resources */,
+				911915CC2A6B1A19006BA4D7 /* GoogleMaps.bundle in Resources */,
+				91596F912A69A68C00E6C7AE /* Montserrat-Regular.ttf in Resources */,
+				9149979E2A6868B600F317B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		914997922A6868B400F317B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911ABF9D2A6F02F0006B7921 /* ShopsViewModel.swift in Sources */,
+				91596F8D2A699F7F00E6C7AE /* ListCardView.swift in Sources */,
+				914997AE2A689E4400F317B1 /* NavigationTabView.swift in Sources */,
+				91596F962A69B88000E6C7AE /* FavoritesView.swift in Sources */,
+				91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */,
+				91596F8A2A69933700E6C7AE /* SearchResultsView.swift in Sources */,
+				911915F52A6B1D0B006BA4D7 /* ShopsView.swift in Sources */,
+				91596F9B2A69DA7600E6C7AE /* CardOverviewView.swift in Sources */,
+				911915F32A6B1C65006BA4D7 /* GoogleMapsView.swift in Sources */,
+				9149979C2A6868B400F317B1 /* ContentView.swift in Sources */,
+				91596F9E2A69ECD200E6C7AE /* CardTypeView.swift in Sources */,
+				911ABF9B2A6ED99F006B7921 /* LocationDataManager.swift in Sources */,
+				9149979A2A6868B400F317B1 /* HearthstoneApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		914997A22A6868B600F317B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		914997A32A6868B600F317B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		914997A52A6868B600F317B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hearthstone/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hearthstone/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Allow Hearthstone to access to your location?\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueparrotsoftwarellc.Hearthstone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		914997A62A6868B600F317B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hearthstone/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hearthstone/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Allow Hearthstone to access to your location?\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueparrotsoftwarellc.Hearthstone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		914997912A6868B400F317B1 /* Build configuration list for PBXProject "Hearthstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				914997A22A6868B600F317B1 /* Debug */,
+				914997A32A6868B600F317B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		914997A42A6868B600F317B1 /* Build configuration list for PBXNativeTarget "Hearthstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				914997A52A6868B600F317B1 /* Debug */,
+				914997A62A6868B600F317B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9149978E2A6868B400F317B1 /* Project object */;
+}
