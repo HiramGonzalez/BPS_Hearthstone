@@ -45,6 +45,11 @@
 		91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F972A69BCD800E6C7AE /* SearchBarView.swift */; };
 		91596F9B2A69DA7600E6C7AE /* CardOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F9A2A69DA7600E6C7AE /* CardOverviewView.swift */; };
 		91596F9E2A69ECD200E6C7AE /* CardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596F9D2A69ECD200E6C7AE /* CardTypeView.swift */; };
+		91E09D952A704AAB00C56415 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E09D942A704AAB00C56415 /* Info.swift */; };
+		91E09D972A704E1500C56415 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E09D962A704E1500C56415 /* Card.swift */; };
+		91E09D992A7051B600C56415 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E09D982A7051B500C56415 /* Requests.swift */; };
+		91E09D9B2A70572F00C56415 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E09D9A2A70572F00C56415 /* ContentViewViewModel.swift */; };
+		91E440452A71A19200078D97 /* CardTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E440442A71A19200078D97 /* CardTypeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +93,11 @@
 		91596F972A69BCD800E6C7AE /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		91596F9A2A69DA7600E6C7AE /* CardOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOverviewView.swift; sourceTree = "<group>"; };
 		91596F9D2A69ECD200E6C7AE /* CardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeView.swift; sourceTree = "<group>"; };
+		91E09D942A704AAB00C56415 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		91E09D962A704E1500C56415 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		91E09D982A7051B500C56415 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		91E09D9A2A70572F00C56415 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		91E440442A71A19200078D97 /* CardTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,7 @@
 		914997982A6868B400F317B1 /* Hearthstone */ = {
 			isa = PBXGroup;
 			children = (
+				91E09D922A70496900C56415 /* Data */,
 				911915C52A6B1986006BA4D7 /* GoogleMapsBase.xcframework */,
 				911915C72A6B1996006BA4D7 /* GoogleMaps.xcframework */,
 				911915C92A6B19A1006BA4D7 /* GoogleMapsCore.xcframework */,
@@ -200,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				9149979B2A6868B400F317B1 /* ContentView.swift */,
+				91E09D9A2A70572F00C56415 /* ContentViewViewModel.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -274,8 +286,27 @@
 			isa = PBXGroup;
 			children = (
 				91596F9D2A69ECD200E6C7AE /* CardTypeView.swift */,
+				91E440442A71A19200078D97 /* CardTypeViewModel.swift */,
 			);
 			path = CardType;
+			sourceTree = "<group>";
+		};
+		91E09D922A70496900C56415 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				91E09D932A704A7E00C56415 /* Model */,
+				91E09D982A7051B500C56415 /* Requests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		91E09D932A704A7E00C56415 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91E09D942A704AAB00C56415 /* Info.swift */,
+				91E09D962A704E1500C56415 /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,14 +388,19 @@
 				914997AE2A689E4400F317B1 /* NavigationTabView.swift in Sources */,
 				91596F962A69B88000E6C7AE /* FavoritesView.swift in Sources */,
 				91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */,
+				91E09D992A7051B600C56415 /* Requests.swift in Sources */,
 				91596F8A2A69933700E6C7AE /* SearchResultsView.swift in Sources */,
 				911915F52A6B1D0B006BA4D7 /* ShopsView.swift in Sources */,
+				91E09D972A704E1500C56415 /* Card.swift in Sources */,
 				91596F9B2A69DA7600E6C7AE /* CardOverviewView.swift in Sources */,
+				91E09D9B2A70572F00C56415 /* ContentViewViewModel.swift in Sources */,
 				911915F32A6B1C65006BA4D7 /* GoogleMapsView.swift in Sources */,
 				9149979C2A6868B400F317B1 /* ContentView.swift in Sources */,
 				91596F9E2A69ECD200E6C7AE /* CardTypeView.swift in Sources */,
+				91E440452A71A19200078D97 /* CardTypeViewModel.swift in Sources */,
 				911ABF9B2A6ED99F006B7921 /* LocationDataManager.swift in Sources */,
 				9149979A2A6868B400F317B1 /* HearthstoneApp.swift in Sources */,
+				91E09D952A704AAB00C56415 /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

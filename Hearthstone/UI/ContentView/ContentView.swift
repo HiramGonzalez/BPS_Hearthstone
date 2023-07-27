@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentView.ViewModel()
+    @State private var index = 0
+    
     var body: some View {
         NavigationStack {
             GeometryReader { geo in
@@ -42,16 +45,16 @@ struct ContentView: View {
                         Spacer()
                         
                         VStack(spacing: 0) {
-                            TabView {
-                                ForEach((0..<3), id: \.self) { index in
+                            TabView(selection: $index) {
+                                ForEach(0..<viewModel.classes.count, id: \.self) { index in
                                     NavigationLink {
-                                        CardTypeView()
+                                        CardTypeView(searchTerm: viewModel.classes[index])
                                     } label: {
                                         VStack {
-                                            Image("demonHunter")
+                                            Image((UIImage(named: viewModel.classes[index]) != nil) ? viewModel.classes[index] : "No image")
                                                 .resizable()
                                                 .frame(width: geo.size.height / 3, height: geo.size.height / 3)
-                                            Text("Demon Hunter")
+                                            Text(viewModel.classes[index])
                                                 .font(.custom("Montserrat-SemiBold", size: 24))
                                                 .foregroundColor(Color(red: 0.985, green: 0.805, blue: 0.116, opacity: 1.0))
                                                 .padding(.top, 8)
@@ -63,9 +66,9 @@ struct ContentView: View {
                             .frame(width: geo.size.width, height: geo.size.height / 2.15)
                             
                             HStack(spacing: 10) {
-                                ForEach((0..<5), id: \.self) { index in
+                                ForEach(0..<viewModel.classes.count, id: \.self) { index in
                                     Circle()
-                                        .fill(Color.white)
+                                        .foregroundColor(self.index == index ? Color.yellow : Color.white)
                                         .frame(width: 12, height: 12)
                                 }
                             }
@@ -81,6 +84,7 @@ struct ContentView: View {
             }
             .ignoresSafeArea(.keyboard)
         }
+        
     }
 }
 

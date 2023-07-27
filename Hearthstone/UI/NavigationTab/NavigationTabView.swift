@@ -51,9 +51,11 @@ struct NavigationTabView: View {
                     } label: {
                         Image(selectedTab == 2 ? "bottomNavShopsAOnPrimaryActiveLight" : "bottomNavShopsAOnPrimaryInactiveLight")
                     }
+                    .edgesIgnoringSafeArea(.bottom)
                     
                 }
             }
+            
         }
         .ignoresSafeArea(.keyboard)
     }

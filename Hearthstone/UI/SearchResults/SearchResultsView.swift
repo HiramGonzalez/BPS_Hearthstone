@@ -34,10 +34,10 @@ struct SearchResultsView: View {
                     
                     ScrollView {
                         VStack {
-                            ListCardView()
-                            ListCardView()
-                            ListCardView()
-                            ListCardView()
+//                            ListCardView()
+//                            ListCardView()
+//                            ListCardView()
+//                            ListCardView()
                         }
                         .padding(.bottom, geo.size.height / 7.5)
                     }

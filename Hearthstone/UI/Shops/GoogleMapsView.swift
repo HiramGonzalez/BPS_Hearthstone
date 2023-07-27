@@ -12,7 +12,7 @@ struct GoogleMapsView: UIViewRepresentable {
     @StateObject var locationDataManager = LocationDataManager()
     
     func makeUIView(context: Context) -> GMSMapView {
-        GMSServices.provideAPIKey("AIzaSyCuFTdTbQUp5ylRFIBx5ZdIgIllXckqMbA")
+        //GMSServices.provideAPIKey("AIzaSyCuFTdTbQUp5ylRFIBx5ZdIgIllXckqMbA")
         
         if locationDataManager.locationManager.authorizationStatus == .authorizedWhenInUse {
             let camera = GMSCameraPosition.camera(withLatitude: Double(locationDataManager.locationManager.location?.coordinate.latitude ?? 37.09), longitude: Double(locationDataManager.locationManager.location?.coordinate.longitude ?? -95.71), zoom: 15.0)
