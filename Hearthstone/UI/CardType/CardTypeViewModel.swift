@@ -30,7 +30,7 @@ extension CardTypeView {
         }
         
         func searchCards(ofClass type: String) {
-            results = requests.getSearchResults(for: type)
+            results = requests.getSearchResults(.byClass, for: type)
         }
         
         func updateManually(_ newResults: [Card]) {

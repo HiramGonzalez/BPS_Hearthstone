@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct SearchBarView: View {
-    @State var search = ""
+    @Binding var search: String
+    @State var isSearchResultsViewShowing: Bool
+    @State private var presentSearchResultsView = false
+    var viewModel: SearchResultsView.ViewModel?
     
     var body: some View {
         HStack {
@@ -27,8 +30,12 @@ struct SearchBarView: View {
             
             Spacer()
             
-            NavigationLink {
-                SearchResultsView()
+            Button {
+                if !isSearchResultsViewShowing {
+                    presentSearchResultsView = true
+                } else {
+                    viewModel?.searchCards(withTerms: search)
+                }
             } label: {
                 Text("Search")
                     .font(.custom("Montserrat-SemiBold", size: 16))
@@ -37,11 +44,14 @@ struct SearchBarView: View {
             }
         }
         .padding(.horizontal)
+        .navigationDestination(isPresented: $presentSearchResultsView) {
+            SearchResultsView(searchTerm: search)
+        }
     }
 }
 
-struct SearchBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBarView()
-    }
-}
+//struct SearchBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchBarView(search: <#Binding<String>#>, isSearchResultsViewShowing: false, viewModel: nil)
+//    }
+//}

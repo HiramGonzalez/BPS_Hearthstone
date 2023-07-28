@@ -11,6 +11,10 @@ class Requests: ObservableObject {
     @Published var classes: [String] = []
     @Published var searchResults: [Card] = []
     
+    enum searchType {
+        case byClass, byName
+    }
+    
     init() {
         loadClasses()
     }
@@ -50,21 +54,23 @@ class Requests: ObservableObject {
         return classes
     }
     
-    func getSearchResults(for term: String) -> [Card] {
-        searchByCardType(of: term)
+    func getFavoriteCards() -> [Card] {
+        return searchResults
+    }
+    
+    func getSearchResults(_ searchType: searchType, for terms: String) -> [Card] {
+        searchByCardType(searchType, terms: terms)
         return searchResults
     }
     
     
-    func searchByCardType(of type: String) {
+    func searchByCardType(_ searchType: searchType, terms: String) {
         let headers = [
             "X-RapidAPI-Key": "2bd303fc69msh2ad3f8f9e9eec0dp176f2ajsn4812ea7c5555",
             "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/classes/\(type)")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: NSURL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/\(searchType == .byClass ? "classes" : "search")/\(terms.replacingOccurrences(of: " ", with: "%20"))")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
 
@@ -84,5 +90,35 @@ class Requests: ObservableObject {
         }
 
         dataTask.resume()
+    }
+    
+    func loadFavorites(favoritesId: [String]) {
+        self.searchResults = []
+        let headers = [
+            "X-RapidAPI-Key": "2bd303fc69msh2ad3f8f9e9eec0dp176f2ajsn4812ea7c5555",
+            "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com"
+        ]
+        
+        for i in 0..<favoritesId.count {
+            let request = NSMutableURLRequest(url: NSURL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/\(favoritesId[i])")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+            
+            request.httpMethod = "GET"
+            request.allHTTPHeaderFields = headers
+
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+                if (error != nil) {
+                    print(error as Any)
+                }
+                
+                if let data = data {
+                    if let decoded = try? JSONDecoder().decode(Card.self, from: data){
+                        self.searchResults.append(decoded)
+                    }
+                }
+            })
+
+            dataTask.resume()
+        }
     }
 }

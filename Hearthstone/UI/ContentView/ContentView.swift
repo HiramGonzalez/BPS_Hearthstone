@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = ContentView.ViewModel()
     @State private var index = 0
+    @State private var search = ""
     
     var body: some View {
         NavigationStack {
@@ -39,7 +40,7 @@ struct ContentView: View {
                             .padding(.bottom, 32)
                             .padding(.top)
                         
-                        SearchBarView()
+                        SearchBarView(search: $search, isSearchResultsViewShowing: false)
                             .padding(.bottom, 0)
                         
                         Spacer()

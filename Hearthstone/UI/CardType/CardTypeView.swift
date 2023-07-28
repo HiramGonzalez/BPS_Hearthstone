@@ -10,6 +10,8 @@ import SwiftUI
 struct CardTypeView: View {
     let searchTerm: String
     @StateObject var viewModel: CardTypeView.ViewModel
+    @State private var didFinishLoading = false
+    @ObservedObject var listViewModel = ListCardView.ViewModel(id: "")
     
     var body: some View {
         GeometryReader { geo in
@@ -37,19 +39,35 @@ struct CardTypeView: View {
                         VStack() {
                     
                             ForEach(viewModel.results, id: \.self) { card in
-                                ListCardView(image: card.img, name: card.name, type: card.type, rarity: card.rarity, cardSet: card.cardSet)
-                                    .frame(maxHeight: geo.size.height * 0.13)
-                                    .padding(.top, geo.size.height > 700 ? geo.size.height * 0.11 : geo.size.height * 0.13)
+                                NavigationLink {
+                                    CardOverviewView(cardId: card.cardId, name: card.name, playerClass: card.playerClass, image: card.img, type: card.type, rarity: card.rarity, cardSet: card.cardSet, text: card.text, viewModel: ListCardView.ViewModel(id: card.cardId))
+                                } label: {
+                                    ListCardView(cardId: card.cardId, image: card.img, name: card.name, type: card.type, rarity: card.rarity, cardSet: card.cardSet)
+                                        .frame(maxHeight: geo.size.height * 0.13)
+                                        .padding(.top, geo.size.height > 600 ? geo.size.height * 0.125 : geo.size.height * 0.145)
+                                        .onAppear {
+                                            listViewModel.isThisCardFavorite(id: card.cardId)
+                                        }
+                                }
+
                                 
                                 Spacer()
-                                    .frame(height: geo.size.height > 700 ? geo.size.height * 0.12 : geo.size.height * 0.15)
+                                    //.frame(height: geo.size.height > 500 ? geo.size.height * 0.13 : geo.size.height * 0.17)
+                                    .frame(width: geo.size.width, height: 90)
                                 
+                            }
+                            .onAppear {
+                                didFinishLoading = true
                             }
                         }
                         .padding(.bottom, geo.size.height / 7.5)
+                        
+                        if !didFinishLoading {
+                            ProgressView()
+                                .controlSize(.large)
+                                .tint(.yellow)
+                        }
                     }
-                    
-                    
                 }
             }
             
