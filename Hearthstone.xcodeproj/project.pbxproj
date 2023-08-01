@@ -54,6 +54,7 @@
 		91E09D992A7051B600C56415 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E09D982A7051B500C56415 /* Requests.swift */; };
 		91E09D9B2A70572F00C56415 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E09D9A2A70572F00C56415 /* ContentViewViewModel.swift */; };
 		91E440452A71A19200078D97 /* CardTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E440442A71A19200078D97 /* CardTypeViewModel.swift */; };
+		91E5FC9E2A781315003E7749 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5FC9D2A781315003E7749 /* FavoritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		91E09D982A7051B500C56415 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		91E09D9A2A70572F00C56415 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
 		91E440442A71A19200078D97 /* CardTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeViewModel.swift; sourceTree = "<group>"; };
+		91E5FC9D2A781315003E7749 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				91596F952A69B88000E6C7AE /* FavoritesView.swift */,
+				91E5FC9D2A781315003E7749 /* FavoritesViewModel.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				91E440452A71A19200078D97 /* CardTypeViewModel.swift in Sources */,
 				91A588B42A74308F00DCC040 /* UserDefaults.swift in Sources */,
 				911ABF9B2A6ED99F006B7921 /* LocationDataManager.swift in Sources */,
+				91E5FC9E2A781315003E7749 /* FavoritesViewModel.swift in Sources */,
 				9149979A2A6868B400F317B1 /* HearthstoneApp.swift in Sources */,
 				91E09D952A704AAB00C56415 /* Info.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var saveFavorites: SaveFavorites
     @StateObject var viewModel = ContentView.ViewModel()
     @State private var index = 0
     @State private var search = ""

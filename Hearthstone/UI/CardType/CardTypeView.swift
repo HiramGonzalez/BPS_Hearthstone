@@ -12,6 +12,7 @@ struct CardTypeView: View {
     @StateObject var viewModel: CardTypeView.ViewModel
     @State private var didFinishLoading = false
     @ObservedObject var listViewModel = ListCardView.ViewModel(id: "")
+    //@EnvironmentObject var saveFavorites: SaveFavorites
     
     var body: some View {
         GeometryReader { geo in
@@ -52,7 +53,6 @@ struct CardTypeView: View {
 
                                 
                                 Spacer()
-                                    //.frame(height: geo.size.height > 500 ? geo.size.height * 0.13 : geo.size.height * 0.17)
                                     .frame(width: geo.size.width, height: 90)
                                 
                             }

@@ -9,15 +9,17 @@ import SwiftUI
 
 struct NavigationTabView: View {
     //@State var geo: GeometryProxy
-    
+    @EnvironmentObject var saveFavorites: SaveFavorites
     @State private var selectedTab = 0
     
     @ViewBuilder var selectedTabView: some View {
         switch selectedTab {
         case 0:
             ContentView()
+                .environmentObject(saveFavorites)
         case 1:
             FavoritesView()
+                .environmentObject(saveFavorites)
         default:
             ShopsView()
         }
@@ -27,6 +29,9 @@ struct NavigationTabView: View {
         
         VStack(spacing: 0) {
             selectedTabView
+                .environmentObject(saveFavorites)
+                
+                
             
             ZStack {
                 Image("navYellowEmpty")
@@ -57,8 +62,10 @@ struct NavigationTabView: View {
             }
             
         }
+        .environmentObject(saveFavorites)
         .ignoresSafeArea(.keyboard)
     }
+    
 }
 
 struct NavigationTabView_Previews: PreviewProvider {

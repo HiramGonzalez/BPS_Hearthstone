@@ -10,6 +10,7 @@ import Foundation
 class Requests: ObservableObject {
     @Published var classes: [String] = []
     @Published var searchResults: [Card] = []
+    @Published var favoritesArray: [Card] = []
     
     enum searchType {
         case byClass, byName
@@ -38,8 +39,6 @@ class Requests: ObservableObject {
             if let data = data {
                 if let decoded = try? JSONDecoder().decode(Classes.self, from: data){
                     self.classes = decoded.classes
-                    print("classes loaded succesfully")
-                    print(self.classes)
                 }
             } else {
                 self.classes = []
@@ -54,8 +53,10 @@ class Requests: ObservableObject {
         return classes
     }
     
-    func getFavoriteCards() -> [Card] {
-        return searchResults
+    func getFavoriteCards(listId: [String]) -> [Card] {
+        loadFavorites(favoritesId: listId)
+        return favoritesArray
+        //return searchResults
     }
     
     func getSearchResults(_ searchType: searchType, for terms: String) -> [Card] {
@@ -93,32 +94,41 @@ class Requests: ObservableObject {
     }
     
     func loadFavorites(favoritesId: [String]) {
-        self.searchResults = []
+        self.favoritesArray = []
+        //var searchresults = [Card]()
         let headers = [
             "X-RapidAPI-Key": "2bd303fc69msh2ad3f8f9e9eec0dp176f2ajsn4812ea7c5555",
             "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com"
         ]
         
-        for i in 0..<favoritesId.count {
-            let request = NSMutableURLRequest(url: NSURL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/\(favoritesId[i])")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-            
-            request.httpMethod = "GET"
-            request.allHTTPHeaderFields = headers
 
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-                if (error != nil) {
-                    print(error as Any)
-                }
+        
+        DispatchQueue.main.async {
+            for i in 0..<favoritesId.count {
+                let request = NSMutableURLRequest(url: NSURL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/\(favoritesId[i])")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
                 
-                if let data = data {
-                    if let decoded = try? JSONDecoder().decode(Card.self, from: data){
-                        self.searchResults.append(decoded)
+                request.httpMethod = "GET"
+                request.allHTTPHeaderFields = headers
+                
+                let session = URLSession.shared
+                let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+                    if (error != nil) {
+                        print(error as Any)
                     }
-                }
-            })
-
-            dataTask.resume()
+                    
+                    if let data = data {
+                        if let decoded = try? JSONDecoder().decode([Card].self, from: data){
+                            
+                            self.favoritesArray.append(contentsOf: decoded)
+                            
+                            
+                        }
+                    }
+                })
+                
+                dataTask.resume()
+            }
         }
+        //return self.searchResults
     }
 }

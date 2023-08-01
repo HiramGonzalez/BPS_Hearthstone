@@ -30,6 +30,10 @@ struct SearchBarView: View {
             
             Spacer()
             
+            NavigationLink(destination: SearchResultsView(searchTerm: search), isActive: $presentSearchResultsView) {
+                EmptyView()
+            }
+            
             Button {
                 if !isSearchResultsViewShowing {
                     presentSearchResultsView = true
@@ -44,9 +48,9 @@ struct SearchBarView: View {
             }
         }
         .padding(.horizontal)
-        .navigationDestination(isPresented: $presentSearchResultsView) {
-            SearchResultsView(searchTerm: search)
-        }
+//        .navigationDestination(isPresented: $presentSearchResultsView) {
+//            SearchResultsView(searchTerm: search)
+//        }
     }
 }
 

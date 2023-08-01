@@ -24,91 +24,92 @@ struct CardOverviewView: View {
         
             ZStack() {
                 GeometryReader { geo in
-                Image("vfxBg1")
-                    .resizable()
-                    .ignoresSafeArea()
-                Image("particles")
-                
-                
-                VStack {
+                    Image("vfxBg1")
+                        .resizable()
+                        .ignoresSafeArea()
+                    Image("particles")
+                    
+                    
                     VStack {
-                        Text(name)
-                            .font(.custom("Montserrat-Medium", size: 22))
-                            .foregroundColor(.white)
-                        Text(playerClass ?? "")
-                            .font(.custom("Montserrat-Medium", size: 22))
-                            .foregroundColor(Color(red: 0.985, green: 0.805, blue: 0.116))
-                        
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        Image(viewModel.isCardFavorite ? "basicHeartFill" : "heartOutline")
-                            .resizable()
-                            .frame(width: geo.size.height * 0.05, height: geo.size.height * 0.05)
-                            .scaledToFit()
-                            .onTapGesture {
-                                viewModel.addOrRemoveCard(id: cardId)
-                            }
-                    }
-                    .padding(.horizontal)
-                    
-                    AsyncImage(url: URL(string: image ?? "notValid")) { phase in
-                        switch phase {
-                        case .failure:
-                            Image("No image").resizable()
-                        case .success(let image):
-                            image.resizable()
-                        default:
-                            ProgressView()
+                        VStack {
+                            Text(name)
+                                .font(.custom("Montserrat-Medium", size: 22))
+                                .foregroundColor(.white)
+                            Text(playerClass ?? "")
+                                .font(.custom("Montserrat-Medium", size: 22))
+                                .foregroundColor(Color(red: 0.985, green: 0.805, blue: 0.116))
+                            
                         }
-                    }
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: geo.size.height * 0.304, height: geo.size.height * 0.4)
-                    .scaledToFit()
-                    .padding(.bottom)
-                    
-                    ZStack {
-                        Image("3DTouchBg")
-                            .resizable()
-                            .frame(minWidth: geo.size.width, minHeight: geo.size.height * 0.2)
-                            .scaledToFit()
                         
                         HStack {
-                            
-                            VStack(alignment: .leading, spacing: 12) {
-                                if type != nil {
-                                    Text("Type: ").bold() +
-                                    Text(type!)
-                                }
-                                
-                                if rarity != nil {
-                                    Text("Rarity: ").bold() +
-                                    Text(rarity!)
-                                }
-                                
-                                if cardSet != nil {
-                                    Text("Set: ").bold() +
-                                    Text(cardSet!)
-                                }
-                                
-                                if text != nil {
-                                    Text("Effect: ").bold() +
-                                    Text(text!)
-                                }
-                                
-                            }
-                            .padding(.leading)
-                            
                             Spacer()
+                            Image(viewModel.isCardFavorite ? "basicHeartFill" : "heartOutline")
+                                .resizable()
+                                .frame(width: geo.size.height * 0.05, height: geo.size.height * 0.05)
+                                .scaledToFit()
+                                .onTapGesture {
+                                    viewModel.addOrRemoveCard(id: cardId)
+                                }
                         }
+                        .padding(.horizontal)
+                        
+                        AsyncImage(url: URL(string: image ?? "notValid")) { phase in
+                            switch phase {
+                            case .failure:
+                                Image("No image").resizable()
+                            case .success(let image):
+                                image.resizable()
+                            default:
+                                ProgressView()
+                            }
+                        }
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geo.size.height * 0.304, height: geo.size.height * 0.4)
+                        .scaledToFit()
+                        .padding(.bottom)
+                        
+                        ZStack {
+                            Image("3DTouchBg")
+                                .resizable()
+                                .frame(minWidth: geo.size.width, minHeight: geo.size.height * 0.2)
+                                .scaledToFit()
+                            
+                            HStack {
+                                
+                                VStack(alignment: .leading, spacing: 12) {
+                                    if type != nil {
+                                        Text("Type: ").bold() +
+                                        Text(type!)
+                                    }
+                                    
+                                    if rarity != nil {
+                                        Text("Rarity: ").bold() +
+                                        Text(rarity!)
+                                    }
+                                    
+                                    if cardSet != nil {
+                                        Text("Set: ").bold() +
+                                        Text(cardSet!)
+                                    }
+                                    
+                                    if text != nil {
+                                        Text("Effect: ").bold() +
+                                        Text(text!)
+                                    }
+                                    
+                                }
+                                .padding(.leading)
+                                
+                                Spacer()
+                            }
+                        }
+                        .frame(minWidth: geo.size.width)
+                        
+                        Spacer()
                     }
-                    .frame(minWidth: geo.size.width)
-                    
-                    Spacer()
+                    .frame(width: geo.size.width, height: geo.frame(in: .local).height)
                 }
-                .frame(width: geo.size.width, height: geo.frame(in: .local).height)
-            }
+            
             
         }
     }

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct HearthstoneApp: App {
+    var saveFavorites = SaveFavorites()
+    
     var body: some Scene {
         WindowGroup {
             NavigationTabView()
+                .environmentObject(saveFavorites)
         }
     }
 }

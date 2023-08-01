@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension CardOverviewView {
     
     class ViewModel: ObservableObject {
         var id: String
-        var saveInMemory = SaveFavorites()
+        @EnvironmentObject var saveFavorites: SaveFavorites
         @Published var isCardFavorite: Bool
         
         init(id: String, saveInMemory: SaveFavorites = SaveFavorites()) {
@@ -20,11 +21,12 @@ extension CardOverviewView {
         }
         
         func addFavorite(id: String) {
-            saveInMemory.addFavorite(id: id)
+            saveFavorites.addFavorite(id: id)
+            
         }
         
         func removeFavorite(id: String) {
-            saveInMemory.removeFavorite(id: id)
+            saveFavorites.removeFavorite(id: id)
         }
         
 //        func isThisCardFavorite(id: String) {
