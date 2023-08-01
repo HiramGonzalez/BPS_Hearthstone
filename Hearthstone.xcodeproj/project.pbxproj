@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910D50902A797C5A00AEE77E /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910D508F2A797C5A00AEE77E /* GooglePlaces.xcframework */; };
+		910D50922A797CBC00AEE77E /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 910D50912A797CBC00AEE77E /* GooglePlaces.bundle */; };
+		910D50942A79BBCD00AEE77E /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910D50932A79BBCD00AEE77E /* PlacesList.swift */; };
 		911915C62A6B1986006BA4D7 /* GoogleMapsBase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915C52A6B1986006BA4D7 /* GoogleMapsBase.xcframework */; };
 		911915C82A6B1996006BA4D7 /* GoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915C72A6B1996006BA4D7 /* GoogleMaps.xcframework */; };
 		911915CA2A6B19A1006BA4D7 /* GoogleMapsCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911915C92A6B19A1006BA4D7 /* GoogleMapsCore.xcframework */; };
@@ -58,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910D508F2A797C5A00AEE77E /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
+		910D50912A797CBC00AEE77E /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "GooglePlaces.xcframework/ios-arm64/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
+		910D50932A79BBCD00AEE77E /* PlacesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
 		911915C52A6B1986006BA4D7 /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMapsBase.xcframework; sourceTree = "<group>"; };
 		911915C72A6B1996006BA4D7 /* GoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMaps.xcframework; sourceTree = "<group>"; };
 		911915C92A6B19A1006BA4D7 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMapsCore.xcframework; sourceTree = "<group>"; };
@@ -116,19 +122,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				911915ED2A6B1AAD006BA4D7 /* UIKit.framework in Frameworks */,
-				911915EB2A6B1AA3006BA4D7 /* SystemConfiguration.framework in Frameworks */,
 				911915E92A6B1A9C006BA4D7 /* QuartzCore.framework in Frameworks */,
-				911915E72A6B1A96006BA4D7 /* OpenGLES.framework in Frameworks */,
-				911915E52A6B1A8F006BA4D7 /* Metal.framework in Frameworks */,
 				911915E32A6B1A88006BA4D7 /* libz.tbd in Frameworks */,
 				911915E12A6B1A82006BA4D7 /* libc++.tbd in Frameworks */,
+				911915D72A6B1A5A006BA4D7 /* CoreLocation.framework in Frameworks */,
+				911915D32A6B1A48006BA4D7 /* CoreGraphics.framework in Frameworks */,
+				911915EB2A6B1AA3006BA4D7 /* SystemConfiguration.framework in Frameworks */,
+				911915E72A6B1A96006BA4D7 /* OpenGLES.framework in Frameworks */,
+				911915E52A6B1A8F006BA4D7 /* Metal.framework in Frameworks */,
 				911915DF2A6B1A75006BA4D7 /* ImageIO.framework in Frameworks */,
 				911915DD2A6B1A6D006BA4D7 /* GLKit.framework in Frameworks */,
 				911915DB2A6B1A66006BA4D7 /* CoreText.framework in Frameworks */,
 				911915D92A6B1A60006BA4D7 /* CoreTelephony.framework in Frameworks */,
-				911915D72A6B1A5A006BA4D7 /* CoreLocation.framework in Frameworks */,
+				910D50902A797C5A00AEE77E /* GooglePlaces.xcframework in Frameworks */,
 				911915D52A6B1A4F006BA4D7 /* CoreImage.framework in Frameworks */,
-				911915D32A6B1A48006BA4D7 /* CoreGraphics.framework in Frameworks */,
 				911915D12A6B1A41006BA4D7 /* CoreData.framework in Frameworks */,
 				911915CF2A6B1A3A006BA4D7 /* Accelerate.framework in Frameworks */,
 				911915CA2A6B19A1006BA4D7 /* GoogleMapsCore.xcframework in Frameworks */,
@@ -170,6 +177,7 @@
 				911915F42A6B1D0B006BA4D7 /* ShopsView.swift */,
 				911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */,
 				911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */,
+				910D50932A79BBCD00AEE77E /* PlacesList.swift */,
 			);
 			path = Shops;
 			sourceTree = "<group>";
@@ -177,6 +185,8 @@
 		9149978D2A6868B400F317B1 = {
 			isa = PBXGroup;
 			children = (
+				910D508F2A797C5A00AEE77E /* GooglePlaces.xcframework */,
+				910D50912A797CBC00AEE77E /* GooglePlaces.bundle */,
 				911915CB2A6B1A19006BA4D7 /* GoogleMaps.bundle */,
 				914997982A6868B400F317B1 /* Hearthstone */,
 				914997972A6868B400F317B1 /* Products */,
@@ -388,6 +398,7 @@
 				911915CC2A6B1A19006BA4D7 /* GoogleMaps.bundle in Resources */,
 				91596F912A69A68C00E6C7AE /* Montserrat-Regular.ttf in Resources */,
 				9149979E2A6868B600F317B1 /* Assets.xcassets in Resources */,
+				910D50922A797CBC00AEE77E /* GooglePlaces.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +416,7 @@
 				91596F962A69B88000E6C7AE /* FavoritesView.swift in Sources */,
 				91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */,
 				91E09D992A7051B600C56415 /* Requests.swift in Sources */,
+				910D50942A79BBCD00AEE77E /* PlacesList.swift in Sources */,
 				91596F8A2A69933700E6C7AE /* SearchResultsView.swift in Sources */,
 				91BEAB0D2A72E4DD00F34106 /* SearchResultsViewModel.swift in Sources */,
 				911915F52A6B1D0B006BA4D7 /* ShopsView.swift in Sources */,

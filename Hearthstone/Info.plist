@@ -4,6 +4,8 @@
 <dict>
 	<key>GMSApiKey</key>
 	<string>AIzaSyCuFTdTbQUp5ylRFIBx5ZdIgIllXckqMbA</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>&quot;Show your location on the map&quot;</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-SemiBold.ttf</string>

@@ -4,21 +4,22 @@
 //
 //  Created by BPS.Dev01 on 7/21/23.
 //
-
+import GoogleMaps
 import SwiftUI
 
 struct ShopsView: View {
     @State var search = ""
+    //let position = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+
     
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .top) {
                 
                 VStack(spacing: 0) {
-                    //GoogleMapsView()
+                    GoogleMapsView()
                     //Color.cyan.opacity(0.5)
-//                    NavigationTabView()
-//                        .frame(width: geo.size.width)
+                    
                 }
                 
                 TextField("Search card shops", text: $search)
@@ -31,6 +32,8 @@ struct ShopsView: View {
         }
         .ignoresSafeArea(.keyboard)
     }
+    
+
 }
 
 struct ShopsView_Previews: PreviewProvider {
