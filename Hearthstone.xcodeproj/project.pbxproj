@@ -34,6 +34,8 @@
 		911915F52A6B1D0B006BA4D7 /* ShopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911915F42A6B1D0B006BA4D7 /* ShopsView.swift */; };
 		911ABF9B2A6ED99F006B7921 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */; };
 		911ABF9D2A6F02F0006B7921 /* ShopsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */; };
+		913F04F12A7B0323009D0001 /* ShopDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F04F02A7B0323009D0001 /* ShopDetailsView.swift */; };
+		913F04F32A7B0FEC009D0001 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F04F22A7B0FEC009D0001 /* Coordinator.swift */; };
 		9149979A2A6868B400F317B1 /* HearthstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914997992A6868B400F317B1 /* HearthstoneApp.swift */; };
 		9149979C2A6868B400F317B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9149979B2A6868B400F317B1 /* ContentView.swift */; };
 		9149979E2A6868B600F317B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9149979D2A6868B600F317B1 /* Assets.xcassets */; };
@@ -88,6 +90,8 @@
 		911915F42A6B1D0B006BA4D7 /* ShopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsView.swift; sourceTree = "<group>"; };
 		911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 		911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewModel.swift; sourceTree = "<group>"; };
+		913F04F02A7B0323009D0001 /* ShopDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailsView.swift; sourceTree = "<group>"; };
+		913F04F22A7B0FEC009D0001 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		914997962A6868B400F317B1 /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914997992A6868B400F317B1 /* HearthstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneApp.swift; sourceTree = "<group>"; };
 		9149979B2A6868B400F317B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				911ABF9A2A6ED99F006B7921 /* LocationDataManager.swift */,
 				911ABF9C2A6F02F0006B7921 /* ShopsViewModel.swift */,
 				910D50932A79BBCD00AEE77E /* PlacesList.swift */,
+				913F04F02A7B0323009D0001 /* ShopDetailsView.swift */,
+				913F04F22A7B0FEC009D0001 /* Coordinator.swift */,
 			);
 			path = Shops;
 			sourceTree = "<group>";
@@ -411,8 +417,10 @@
 			files = (
 				91A588B82A74549F00DCC040 /* ListaCardViewModel.swift in Sources */,
 				911ABF9D2A6F02F0006B7921 /* ShopsViewModel.swift in Sources */,
+				913F04F32A7B0FEC009D0001 /* Coordinator.swift in Sources */,
 				91596F8D2A699F7F00E6C7AE /* ListCardView.swift in Sources */,
 				914997AE2A689E4400F317B1 /* NavigationTabView.swift in Sources */,
+				913F04F12A7B0323009D0001 /* ShopDetailsView.swift in Sources */,
 				91596F962A69B88000E6C7AE /* FavoritesView.swift in Sources */,
 				91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */,
 				91E09D992A7051B600C56415 /* Requests.swift in Sources */,

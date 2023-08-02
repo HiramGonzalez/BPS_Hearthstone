@@ -22,3 +22,10 @@ struct HearthstoneApp: App {
         }
     }
 }
+
+//class AppDelegate: NSObject, UIApplicationDelegate {
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+//        GMSPlacesClient.provideAPIKey("AIzaSyCieTBF_KFuGwSUwrNuNfB8GEJ-6KvGYR4")
+//        return true
+//    }
+//}

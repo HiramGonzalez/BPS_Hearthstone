@@ -13,37 +13,41 @@ struct GoogleMapsView: UIViewRepresentable {
     
     @StateObject var locationDataManager = LocationDataManager()
     var placesList = PlacesList()
+    @State var selectedMarker: GMSMarker?
     let zoom: Float = 15.0
     
     func makeUIView(context: Context) -> GMSMapView {
         GMSServices.provideAPIKey("AIzaSyCuFTdTbQUp5ylRFIBx5ZdIgIllXckqMbA")
         
-        
         let camera = GMSCameraPosition.camera(withLatitude: locationDataManager.latitude, longitude: locationDataManager.longitude, zoom: zoom)
-        return GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.clear()
+        mapView.isUserInteractionEnabled = true
+        mapView.delegate = context.coordinator
         
-//        if locationDataManager.locationManager.authorizationStatus == .authorizedWhenInUse {
-////            let camera = GMSCameraPosition.camera(withLatitude: Double(locationDataManager.locationManager.location?.coordinate.latitude ?? 37.09), longitude: Double(locationDataManager.locationManager.location?.coordinate.longitude ?? -95.71), zoom: 15.0)
-//            let camera = GMSCameraPosition.camera(withLatitude: locationDataManager.latitude, longitude: locationDataManager.longitude, zoom: zoom)
-//            return GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//        } else {
-//            let camera = GMSCameraPosition.camera(withLatitude: 37.09, longitude: -95.71, zoom: 15.0)
-//            return GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//        }
+        return mapView
+        
     }
     
     
     func updateUIView(_ mapView: UIViewType, context: Context) {
+        mapView.clear()
         mapView.camera = GMSCameraPosition.camera(withLatitude: locationDataManager.latitude, longitude: locationDataManager.longitude, zoom: zoom)
         for index in 0..<placesList.places.count {
-//            let marker = GMSMarker(position: place.place.coordinate!)
-//            marker.title = "HearthStone Card Shoppe"
-//            marker.map = mapView
             let place = placesList.places[index]
-            let marker = GMSMarker(position: place.place.coordinate)
+            let marker = GMSMarker()
+            //marker = GMSMarker(position: place.place.coordinate)
+            marker.position = CLLocationCoordinate2D(latitude: place.place.coordinate.latitude, longitude: place.place.coordinate.longitude)
             marker.title = "HearthStone Card Shoppe"
+            marker.icon = UIImage(named: "marker")
+            marker.opacity = 1.0
             marker.map = mapView
+            print("Marker \(index) in lat:\(place.place.coordinate.latitude), lon: \(place.place.coordinate.longitude)")
         }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
     }
 }
 
