@@ -4,23 +4,30 @@
 //
 //  Created by BPS.Dev01 on 8/1/23.
 //
-
+import Combine
 import Foundation
 import GooglePlaces
 
 class PlacesList: NSObject, ObservableObject {
     private var placesClient: GMSPlacesClient = GMSPlacesClient.shared()
     @Published var places = [GMSPlaceLikelihood]()
+    var subscriptions = Set<AnyCancellable>()
     
     override init() {
         super.init()
-        //GMSPlacesClient.provideAPIKey("AIzaSyCieTBF_KFuGwSUwrNuNfB8GEJ-6KvGYR4")
         
         currentPlacesList { (places) in
             guard let places = places else { return }
             self.places = places
             print("Places updated 2")
         }
+        
+//        $places
+//            .receive(on: DispatchQueue.main)
+//            .sink { [weak self] newResults in
+//                self?.updateManually(newResults)
+//            }
+//            .store(in: &subscriptions)
     }
     
     func currentPlacesList(completion: @escaping(([GMSPlaceLikelihood]?) -> Void )) {
@@ -36,5 +43,9 @@ class PlacesList: NSObject, ObservableObject {
             print("Places updated 1")
             completion(self.places)
         }
+    }
+    
+    func updateManually(_ newResults: [GMSPlaceLikelihood]) {
+        self.places = newResults
     }
 }

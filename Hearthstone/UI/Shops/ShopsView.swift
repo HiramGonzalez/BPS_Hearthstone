@@ -4,21 +4,30 @@
 //
 //  Created by BPS.Dev01 on 7/21/23.
 //
-import GoogleMaps
+//import GoogleMaps
 import SwiftUI
 
 struct ShopsView: View {
+    @EnvironmentObject var shopDetails: ShopDetailsVariables
     @State var search = ""
-    //let position = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-
+    @State var showDetails = false
+    @State var mapView = GoogleMapsView()
     
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .top) {
                 
                 VStack(spacing: 0) {
-                    GoogleMapsView()
+                    mapView
+                        .environmentObject(shopDetails)
+//                        .sheet(isPresented: $mapView.isAddressShowing) {
+//                            ShopDetailsView()
+//                        }
                     //Color.cyan.opacity(0.5)
+                    
+                    if shopDetails.isDetailShowing {
+                        ShopDetailsView()
+                    }
                     
                 }
                 
@@ -32,8 +41,6 @@ struct ShopsView: View {
         }
         .ignoresSafeArea(.keyboard)
     }
-    
-
 }
 
 struct ShopsView_Previews: PreviewProvider {

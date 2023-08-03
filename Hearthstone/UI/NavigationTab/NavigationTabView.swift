@@ -10,6 +10,7 @@ import SwiftUI
 struct NavigationTabView: View {
     //@State var geo: GeometryProxy
     @EnvironmentObject var saveFavorites: SaveFavorites
+    @EnvironmentObject var shopDetails: ShopDetailsVariables
     @State private var selectedTab = 0
     
     @ViewBuilder var selectedTabView: some View {
@@ -22,6 +23,7 @@ struct NavigationTabView: View {
                 .environmentObject(saveFavorites)
         default:
             ShopsView()
+                
         }
     }
     
@@ -30,6 +32,7 @@ struct NavigationTabView: View {
         VStack(spacing: 0) {
             selectedTabView
                 .environmentObject(saveFavorites)
+                .environmentObject(shopDetails)
                 
                 
             

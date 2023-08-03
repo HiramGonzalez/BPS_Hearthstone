@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9100CEE52A7C4AE7009D1CA8 /* ShopDetailsVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100CEE42A7C4AE6009D1CA8 /* ShopDetailsVariables.swift */; };
+		9100CEE72A7C6188009D1CA8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100CEE62A7C6188009D1CA8 /* Address.swift */; };
+		9100CEE92A7C644D009D1CA8 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100CEE82A7C644D009D1CA8 /* AddressRequest.swift */; };
 		910D50902A797C5A00AEE77E /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910D508F2A797C5A00AEE77E /* GooglePlaces.xcframework */; };
 		910D50922A797CBC00AEE77E /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 910D50912A797CBC00AEE77E /* GooglePlaces.bundle */; };
 		910D50942A79BBCD00AEE77E /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910D50932A79BBCD00AEE77E /* PlacesList.swift */; };
@@ -63,6 +66,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9100CEE42A7C4AE6009D1CA8 /* ShopDetailsVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailsVariables.swift; sourceTree = "<group>"; };
+		9100CEE62A7C6188009D1CA8 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		9100CEE82A7C644D009D1CA8 /* AddressRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
 		910D508F2A797C5A00AEE77E /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
 		910D50912A797CBC00AEE77E /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "GooglePlaces.xcframework/ios-arm64/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
 		910D50932A79BBCD00AEE77E /* PlacesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 				910D50932A79BBCD00AEE77E /* PlacesList.swift */,
 				913F04F02A7B0323009D0001 /* ShopDetailsView.swift */,
 				913F04F22A7B0FEC009D0001 /* Coordinator.swift */,
+				9100CEE42A7C4AE6009D1CA8 /* ShopDetailsVariables.swift */,
 			);
 			path = Shops;
 			sourceTree = "<group>";
@@ -327,6 +334,7 @@
 				91E09D932A704A7E00C56415 /* Model */,
 				91E09D982A7051B500C56415 /* Requests.swift */,
 				91A588B32A74308F00DCC040 /* UserDefaults.swift */,
+				9100CEE82A7C644D009D1CA8 /* AddressRequest.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -336,6 +344,7 @@
 			children = (
 				91E09D942A704AAB00C56415 /* Info.swift */,
 				91E09D962A704E1500C56415 /* Card.swift */,
+				9100CEE62A7C6188009D1CA8 /* Address.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -421,10 +430,12 @@
 				91596F8D2A699F7F00E6C7AE /* ListCardView.swift in Sources */,
 				914997AE2A689E4400F317B1 /* NavigationTabView.swift in Sources */,
 				913F04F12A7B0323009D0001 /* ShopDetailsView.swift in Sources */,
+				9100CEE72A7C6188009D1CA8 /* Address.swift in Sources */,
 				91596F962A69B88000E6C7AE /* FavoritesView.swift in Sources */,
 				91596F982A69BCD800E6C7AE /* SearchBarView.swift in Sources */,
 				91E09D992A7051B600C56415 /* Requests.swift in Sources */,
 				910D50942A79BBCD00AEE77E /* PlacesList.swift in Sources */,
+				9100CEE92A7C644D009D1CA8 /* AddressRequest.swift in Sources */,
 				91596F8A2A69933700E6C7AE /* SearchResultsView.swift in Sources */,
 				91BEAB0D2A72E4DD00F34106 /* SearchResultsViewModel.swift in Sources */,
 				911915F52A6B1D0B006BA4D7 /* ShopsView.swift in Sources */,
@@ -433,6 +444,7 @@
 				91E09D9B2A70572F00C56415 /* ContentViewViewModel.swift in Sources */,
 				911915F32A6B1C65006BA4D7 /* GoogleMapsView.swift in Sources */,
 				9149979C2A6868B400F317B1 /* ContentView.swift in Sources */,
+				9100CEE52A7C4AE7009D1CA8 /* ShopDetailsVariables.swift in Sources */,
 				91A588B62A7442A100DCC040 /* CardOverviewViewModel.swift in Sources */,
 				91596F9E2A69ECD200E6C7AE /* CardTypeView.swift in Sources */,
 				91E440452A71A19200078D97 /* CardTypeViewModel.swift in Sources */,

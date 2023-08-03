@@ -18,6 +18,7 @@ struct HearthstoneApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationTabView()
+                .environmentObject(ShopDetailsVariables())
                 .environmentObject(saveFavorites)
         }
     }
