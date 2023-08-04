@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ShopDetailsView: View {
+    @EnvironmentObject var shopDetails: ShopDetailsVariables
+//    var address: String?
+//    var placeName: String?
+    
     var body: some View {
         VStack(spacing: 0) {
             VStack(alignment: .leading) {
@@ -32,7 +36,7 @@ struct ShopDetailsView: View {
                         .frame(height: 35)
                     }
                 }
-                Text("Hearthstone Card Shopee")
+                Text(shopDetails.selectedMarker?.title ?? "HearthStone Card Shoppe")
                     .font(.system(size: 21))
                     .padding(.horizontal)
                     .padding(.bottom, 9)
@@ -50,7 +54,7 @@ struct ShopDetailsView: View {
             
             HStack {
                 Image("marker")
-                Text("313 Noodle Ave.")
+                Text(shopDetails.formattedAddress ?? "No address available")
                 Spacer()
             }
             .padding(.vertical, 34)

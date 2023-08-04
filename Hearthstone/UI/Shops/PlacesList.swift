@@ -21,13 +21,6 @@ class PlacesList: NSObject, ObservableObject {
             self.places = places
             print("Places updated 2")
         }
-        
-//        $places
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] newResults in
-//                self?.updateManually(newResults)
-//            }
-//            .store(in: &subscriptions)
     }
     
     func currentPlacesList(completion: @escaping(([GMSPlaceLikelihood]?) -> Void )) {

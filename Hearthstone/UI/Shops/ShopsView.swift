@@ -11,19 +11,15 @@ struct ShopsView: View {
     @EnvironmentObject var shopDetails: ShopDetailsVariables
     @State var search = ""
     @State var showDetails = false
-    @State var mapView = GoogleMapsView()
+    @State var placeName: String? = nil
     
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .top) {
                 
                 VStack(spacing: 0) {
-                    mapView
+                    GoogleMapsView()
                         .environmentObject(shopDetails)
-//                        .sheet(isPresented: $mapView.isAddressShowing) {
-//                            ShopDetailsView()
-//                        }
-                    //Color.cyan.opacity(0.5)
                     
                     if shopDetails.isDetailShowing {
                         ShopDetailsView()

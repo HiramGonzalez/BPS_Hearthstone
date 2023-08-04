@@ -13,7 +13,6 @@ struct GoogleMapsView: UIViewRepresentable {
     @EnvironmentObject var shopDetails: ShopDetailsVariables
     @StateObject var locationDataManager = LocationDataManager()
     var placesList = PlacesList()
-    //var places = [GMSPlaceLikelihood]()
     @State private var markersAreVisible = false
     @State var selectedMarker: GMSMarker? {
         didSet {
@@ -30,9 +29,10 @@ struct GoogleMapsView: UIViewRepresentable {
             shopDetails.coordinates = selectedMarkerCoordinates
         }
     }
+
     @State private var selectedPlace: GMSPlaceLikelihood? = nil
-    //@Binding var showModal: Bool
-    var presentedViewController: UIViewController?
+
+    //@State private var markersLoaded = false
     
     let zoom: Float = 15.0
     
@@ -50,6 +50,7 @@ struct GoogleMapsView: UIViewRepresentable {
             withAnimation(.easeInOut(duration: 1.0)) {
                 mapView.alpha = 1
                 markersAreVisible = true
+                //markersLoaded = true
             }
         }
         
@@ -59,15 +60,14 @@ struct GoogleMapsView: UIViewRepresentable {
     
     
     func updateUIView(_ mapView: GMSMapView, context: Context) {
-        mapView.clear()
+        //mapView.clear()
         mapView.camera = GMSCameraPosition.camera(withLatitude: locationDataManager.latitude, longitude: locationDataManager.longitude, zoom: zoom)
         if markersAreVisible {
             for index in 0..<placesList.places.count {
                 let place = placesList.places[index]
                 let marker = GMSMarker()
-                //marker = GMSMarker(position: place.place.coordinate)
                 marker.position = CLLocationCoordinate2D(latitude: place.place.coordinate.latitude, longitude: place.place.coordinate.longitude)
-                marker.title = "HearthStone Card Shoppe"
+                marker.title = place.place.name
                 marker.icon = UIImage(named: "marker")
                 marker.opacity = 1.0
                 marker.map = mapView

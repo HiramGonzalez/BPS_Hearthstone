@@ -16,8 +16,8 @@ extension ShopsView {
         
         init() {}
         
-        func googleMapsView() -> some View {
-            return GoogleMapsView()
-        }
+//        func googleMapsView() -> some View {
+//            return GoogleMapsView()
+//        }
     }
 }
